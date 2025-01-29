@@ -1,0 +1,308 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+
+<!DOCTYPE html>
+<html>
+
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <title>Licensing Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .heading {
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .signature-section {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .signature-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .signature-table td {
+            width: 50%;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .signature-box {
+            border: 1px solid #000;
+            height: 100px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .required::after {
+            content: "*";
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+
+        const inputs = {
+            agreement: {
+                executionDate: "2025-01-26",
+                governingState: "Louisiana",
+                termDuration: "2 years",
+                termDurationInNumbers: "24",
+                termType: "Fixed",
+                rateTransactionInNumbers: "5000",
+                rateTransactionInWords: "Five thousand dollars"
+            },
+            licensor: {
+                companyName: "InstaSoft, Inc.",
+                streetAddress: "658 Gladyce Road",
+                city: "Port Anastacloton",
+                state: "Louisiana",
+                postalCode: "70383",
+                signature: {
+                    firstName: "John",
+                    lastName: "Doe",
+                    position: "CEO",
+                    date: "2025-01-26"
+                }
+            },
+            licensee: {
+                companyName: "TechWorld Solutions, LLC",
+                typeOfCompany: "Technology Solutions Provider",
+                streetAddress: "123 Innovation Blvd",
+                city: "Techton",
+                state: "California",
+                postalCode: "90001",
+                country: "USA",
+                signature: {
+                    firstName: "Jane",
+                    lastName: "Smith",
+                    position: "COO",
+                    date: "2025-01-26"
+                }
+            },
+            software: {
+                copyrightProduct: "InstaSoft Analytics Suite"
+            },
+            contractName: "Licensing Agreement",
+            contractType: "Software Licensing Agreement",
+        };
+    </script>
+</head>
+
+<!-- END_SECTION: documentHead -->
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+
+    <h1 class="center">Licensing Agreement</h1>
+
+    <!-- END_SECTION: agreementTitle -->
+
+    <!-- SECTION: {"key": "Section_1", "order": 5, "type": "legal", "hasVariables": true} -->
+
+    <p>This License Agreement (hereinafter referred to as "Agreement" or "License Agreement") is made effective on
+        {{agreement.executionDate}}, by and between:</p>
+
+    <p><strong>{{licensor.companyName}}</strong>, a corporation established under the laws of the state of Louisiana,
+        with its principal address at {{licensor.streetAddress}}, {{licensor.city}}, {{licensor.state}},
+        {{licensor.postalCode}} (hereinafter known as "Licensor");</p>
+
+    <p class="center">- and -</p>
+
+    <p>{{licensee.companyName}}, a {{licensee.typeOfCompany}} established under the laws of the state of
+        {{licensee.state}}, with principal address at {{licensee.streetAddress}}, {{licensee.city}}, {{licensee.state}},
+        {{licensee.postalCode}}, {{licensee.country}} (hereinafter known as "Licensee");</p>
+
+    <p><strong>WHEREAS</strong>, the Licensor is the possessor and owner of Copyright of {{software.copyrightProduct}}
+        (hereinafter known as "Software");</p>
+
+    <p><strong>WHEREAS</strong>, the Licensor opens for commercialization a non-exclusive license to use the
+        {{software.copyrightProduct}};</p>
+
+    <p><strong>WHEREAS</strong>, Licensee commits itself to the terms and conditions for the use of such license granted
+        by Licensor;</p>
+
+    <p><strong>NOW, THEREFORE</strong>, in consideration of the foregoing premises, the parties hereby agree as follows:
+    </p>
+
+    <div class="heading">Definitions</div>
+    <p>The terms and definitions of this Agreement may be regarded with or without the use of capitalization of the
+        letter(s), and whether singular or plural, shall be regarded as the same for the following:</p>
+
+    <table>
+        <tr>
+            <td><strong>End-User License</strong></td>
+            <td>shall mean a non-exclusive and non-transferrable authorization granted by the Licensor to the Licensee
+                whether as an end-user;</td>
+        </tr>
+        <tr>
+            <td><strong>Licensed Product</strong></td>
+            <td>shall mean an application, tool, program, or service that is used by the Licensee as authorized by the
+                Licensor;</td>
+        </tr>
+        <tr>
+            <td><strong>Software</strong></td>
+            <td>shall refer to the copyrighted application or program executing specific tasks on a computer under the
+                name {{software.copyrightProduct}};</td>
+        </tr>
+        <tr>
+            <td><strong>Term</strong></td>
+            <td>shall refer to the period and termination of the license in this Agreement.</td>
+        </tr>
+    </table>
+
+    <div class="heading">Consideration</div>
+    <p>In consideration of the grant of license to Licensee for the use of the Software, it is agreed upon that Licensee
+        on every transaction utilizing the Software shall apportion the rate of {{agreement.rateTransactionInNumbers}}
+        ({{agreement.rateTransactionInWords}}).</p>
+
+    <!-- END_SECTION: Section_1 -->
+
+    <!-- SECTION: {"key": "Section_2", "order": 6, "type": "legal", "hasVariables": false} -->
+
+    <div class="heading">Ownership and License Grants</div>
+    <p>The Parties acknowledge that retention over the ownership, title, and interest over the copyright of the Software
+        shall be with Licensor. Subject to the terms and conditions herein, Licensor grants to Licensee the
+        non-exclusive right to use the Software. Licensee may not sell, reproduce, or modify the license granted unto
+        them, except for End-User license where Licensee may distribute licenses granted unto them.</p>
+
+    <div class="heading">Representation</div>
+    <p>Licensor represents and warrants to Licensee that upon execution of this Agreement, the Licensor has the full
+        capacity to authorize and license the Software as described above.</p>
+
+    <div class="heading">Reports</div>
+    <p>Licensee acknowledges that all transactions processed by the software are logged in a database. Reports of
+        transactions shall be sent by Licensee to Licensor monthly, no later than the last day of each month.</p>
+
+    <div class="heading">Compliance</div>
+    <p>Licensee shall, at all times, make reasonable efforts for the use of the Software as permitted in this Agreement.
+        Any changes or intentions by Licensee for other purposes outside the terms of this Agreement shall require
+        consent and approval of Licensor.</p>
+
+    <div class="heading">Disclaimer</div>
+    <p>The Software is provided "as is". Licensor shall not be held liable for any direct, indirect, incidental, or
+        consequential damages arising out of the use of the Software. Licensor is not under obligation to provide
+        support, enhancements, or updates to Licensee.</p>
+
+    <div class="heading">Warranties</div>
+    <p>Licensee warrants that they will comply in all respects with the terms and conditions of this Agreement as well
+        as compliance with local, state, and international laws. Licensee bears sole responsibility for any violation
+        constituting any act with the use of the Software and in no case shall such violation be attributable to
+        Licensor. Nothing in this Agreement shall be deemed as a warranty by Licensee in the grant of use of the
+        Software.</p>
+
+    <div class="heading">Indemnification</div>
+    <p>The Parties shall defend, indemnify, and hold harmless, Licensor, its partners, directors, officers, trustees,
+        agents, successors, and employees from any claims, damages, liabilities, losses, costs, and expenses, including
+        reasonable attorney's fees and cost of suit arising from any failure of any party in any of the warranties in
+        this Agreement.</p>
+    <!-- END_SECTION: Section_2 -->
+
+    <!-- SECTION: {"key": "Section_3", "order": 7, "type": "legal", "hasVariables": true} -->
+    <div class="heading">Term</div>
+    <p>The term of this Agreement shall commence on the date this Agreement is made effective and shall continue for a
+        period of {{agreement.termDuration}} ({{agreement.termDurationInNumbers}}) {{agreement.termType}}.</p>
+
+    <div class="heading">Termination</div>
+    <p>Parties may terminate this agreement with or without cause by submitting a written notice to the other Party, 30
+        days prior to the effective date of termination. Any pending obligations between the parties shall not
+        extinguish the termination of this Agreement.</p>
+    <!-- END_SECTION: Section_3 -->
+
+    <!-- SECTION: {"key": "Section_4", "order": 8, "type": "legal", "hasVariables": false} -->
+    <div class="heading">Miscellaneous Provisions</div>
+
+    <div class="subheading">Relativity</div>
+    <p>This Agreement inures to the benefit of, and is binding upon, the parties and their respective legal
+        representatives, successors, and permitted assigns.</p>
+
+    <div class="heading">Non-waiver</div>
+    <p>The failure of either party to insist upon the strict compliance with and performance of any of the terms,
+        conditions and covenants hereof shall not be deemed as a relinquishment or waiver of any right that said party
+        may have nor shall it be construed as a waiver of any subsequent breach or default of the terms, conditions, and
+        covenants herein contained, but the same shall continue to be in full force and effect. No waiver by either
+        party shall be deemed to have been made unless expressed in writing and signed by the waiving party.</p>
+
+    <div class="heading">Counterparts</div>
+    <p>This contract may be executed in two or more counterparts, each of which shall be deemed an original, but all of
+        which together shall constitute one and the same contract.</p>
+
+    <div class="heading">Agreement Modification</div>
+    <p>No modification or alteration of this Contract shall be considered made unless executed in writing and duly
+        signed by the parties hereto.</p>
+    <!-- END_SECTION: Section_4 -->
+
+    <!-- SECTION: {"key": "Section_5", "order": 9, "type": "legal", "hasVariables": true} -->
+    <div class="heading">Governing Law and Dispute Resolution</div>
+    <p>In the event of any dispute, claim, damage, or controversy arising out of this Agreement, the Parties acknowledge
+        that this Agreement is governed exclusively by the laws of the State of {{agreement.governingState}}. The
+        dispute shall be
+        resolved within sixty (60) days and shall be submitted for arbitration proceedings, with the arbitrator elected
+        by both parties. The cost of the proceedings shall be equally shared by the Parties. However, the prevailing
+        party shall be indemnified by the losing party in terms of the disputed award and attorney's fees, paid by the
+        losing party.</p>
+
+    <p><strong>IN WITNESS WHEREOF</strong>, the parties executed this Agreement as of the date first written above.</p>
+
+    <table class="signature-table">
+        <tr>
+            <td>
+                <div class="signature-box"><span style="color:#f5f5f5">**signature_1**/</span></div>
+                <div class="required">Licensor Representative Signature</div>
+                <input type="text" placeholder="First Name" value="{{licensor.signature.firstName}}" class="required">
+                <input type="text" placeholder="Last Name" value="{{licensor.signature.lastName}}" class="required">
+                <input type="text" placeholder="Position/Title" value="{{licensor.signature.position}}">
+                <input type="text" placeholder="Date" value="{{licensor.signature.date}}" class="required">
+            </td>
+            <td>
+                <div class="signature-box"><span style="color:#f5f5f5">**signature_2**/</span></div>
+                <div class="required">Licensee Representative Signature</div>
+                <input type="text" placeholder="First Name" value="{{licensee.signature.firstName}}" class="required">
+                <input type="text" placeholder="Last Name" value="{{licensee.signature.lastName}}" class="required">
+                <input type="text" placeholder="Position/Title" value="{{licensee.signature.position}}">
+                <input type="text" placeholder="Date" value="{{licensee.signature.date}}" class="required">
+            </td>
+        </tr>
+    </table>
+    <!-- END_SECTION: Section_5 -->
+
+    <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

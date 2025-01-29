@@ -1,0 +1,358 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Contractor Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .party-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .party-block {
+            width: 45%;
+        }
+
+        .payment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .payment-table th,
+        .payment-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .payment-table th {
+            background-color: #f4f4f4;
+        }
+
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .signature-block {
+            width: 45%;
+        }
+
+        .input-field {
+            border-bottom: 1px solid #999;
+            padding: 2px 5px;
+            min-width: 100px;
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+        let inputs = {
+            contract: {
+                name: "Independent Contractor Agreement",
+                date: {
+                    day: new Date().getDate(),
+                    month: new Date().toLocaleString('default', { month: 'long' }),
+                    year: new Date().getFullYear()
+                },
+                governing_law: "California"
+            },
+            contractor: {
+                name: "John Doe",
+                address: {
+                    street: "123 Main St",
+                    street_line_2: "Suite 100",
+                    city: "Los Angeles",
+                    state: "CA",
+                    postal: "90001",
+                    country: "USA"
+                },
+                phone: "(555) 123-4567",
+                email: "johndoe@email.com",
+                signature_date: new Date().toLocaleDateString()
+            },
+            client: {
+                name: "Jane Smith",
+                address: {
+                    street: "456 Elm St",
+                    street_line_2: "Apt 202",
+                    city: "San Francisco",
+                    state: "CA",
+                    postal: "94102",
+                    country: "USA"
+                },
+                phone: "(555) 987-6543",
+                email: "janesmith@email.com",
+                signature_date: new Date().toLocaleDateString()
+            },
+            subject: "Provision of IT consulting services",
+            scope_of_work: "Development and maintenance of custom software solutions",
+            term: {
+                duration: "12 months",
+                start_date: "02/01/2025",
+                end_date: "01/31/2026"
+            },
+            termination: {
+                notice_period_days: 30
+            },
+            payment: {
+                total_amount: "$100,000",
+                schedule: {
+                    initial_payment: {
+                        date: "02/01/2025",
+                        amount: "$25,000"
+                    },
+                    first_payment: {
+                        date: "05/01/2025",
+                        amount: "$25,000"
+                    },
+                    second_payment: {
+                        date: "08/01/2025",
+                        amount: "$25,000"
+                    },
+                    final_payment: {
+                        date: "11/01/2025",
+                        amount: "$25,000"
+                    }
+                },
+                late_payment_interest: "5"
+            },
+        };
+    </script>
+</head>
+
+<!-- END_SECTION: documentHead -->
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+    <h1>Independent Contractor Agreement</h1>
+
+    <!-- END_SECTION: agreementTitle -->
+
+
+    <!-- SECTION: {"key": "Section_0_4", "order": 5, "type": "legal", "hasVariables": true} -->
+
+    <p>This Independent Contractor Agreement (referred to herein as the "Agreement") is made and entered into on this
+        <span class="input-field">{{contract.date.day}}</span> day of <span
+            class="input-field">{{contract.date.month}}</span>, <span class="input-field">{{contract.date.year}}</span>,
+        between the following parties:
+    </p>
+
+    <div class="party-info">
+        <div class="party-block">
+            <h3>Contractor</h3>
+            <p><span class="input-field">{{contractor.name}}</span></p>
+            <p><span class="input-field">{{contractor.address.street}}</span></p>
+            <p><span class="input-field">{{contractor.address.street_line_2}}</span></p>
+            <p><span class="input-field">{{contractor.address.city}}</span>, <span
+                    class="input-field">{{contractor.address.state}}</span> <span
+                    class="input-field">{{contractor.address.postal}}</span></p>
+            <p>Phone: <span class="input-field">{{contractor.phone}}</span></p>
+            <p>Email: <span class="input-field">{{contractor.email}}</span></p>
+        </div>
+        <div class="party-block">
+            <h3>Client</h3>
+            <p><span class="input-field">{{client.name}}</span></p>
+            <p><span class="input-field">{{client.address.street}}</span></p>
+            <p><span class="input-field">{{client.address.street_line_2}}</span></p>
+            <p><span class="input-field">{{client.address.city}}</span>, <span
+                    class="input-field">{{client.address.state}}</span> <span
+                    class="input-field">{{client.address.postal}}</span></p>
+            <p>Phone: <span class="input-field">{{client.phone}}</span></p>
+            <p>Email: <span class="input-field">{{client.email}}</span></p>
+        </div>
+    </div>
+
+    <p>WHEREAS, {{client.name}} requires the services of an independent contractor to <span
+            class="input-field">{{subject}}</span>;</p>
+
+    <p>WHEREAS, Client acknowledges that Contractor possesses the requisite skills, experience, and qualifications
+        necessary to perform the services outlined in this Agreement;</p>
+
+    <p>WHEREAS, Contractor agrees to undertake and fulfill the responsibilities in delivering the specified services;
+    </p>
+
+    <p>NOW, THEREFORE, in consideration of the mutual promises, covenants, and conditions set forth herein, Client and
+        Contractor (individually referred to as "Party" and collectively as "Parties") hereby agree as follows:</p>
+
+        
+    <h3>I. Scope of Work</h3>
+    <p>The specific services to be performed by the Contractor are detailed as follows:</p>
+    <div class="input-field" style="min-height: 100px;">{{scope_of_work}}</div>
+
+    <h3>II. Term of the Agreement</h3>
+    <p>This Agreement shall be in effect for <span class="input-field">{{term.duration}}</span>, beginning on <span
+            class="input-field">{{term.start_date}}</span> and concluding on <span
+            class="input-field">{{term.end_date}}</span>, subject to early termination as provided herein.</p>
+
+    <h3>III. Contract Amount</h3>
+    <p>The total compensation for services rendered under this Agreement shall be <span
+            class="input-field">{{payment.total_amount}}</span>.</p>
+
+    <p>Payment shall be disbursed to the Contractor according to the following schedule:</p>
+    <table class="payment-table">
+        <tr>
+            <th>Payment Phase</th>
+            <th>Due Date</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Initial Payment</td>
+            <td><span class="input-field">{{payment.schedule.initial_payment.date}}</span></td>
+            <td><span class="input-field">{{payment.schedule.initial_payment.amount}}</span></td>
+        </tr>
+        <tr>
+            <td>First Payment</td>
+            <td><span class="input-field">{{payment.schedule.first_payment.date}}</span></td>
+            <td><span class="input-field">{{payment.schedule.first_payment.amount}}</span></td>
+        </tr>
+        <tr>
+            <td>Second Payment</td>
+            <td><span class="input-field">{{payment.schedule.second_payment.date}}</span></td>
+            <td><span class="input-field">{{payment.schedule.second_payment.amount}}</span></td>
+        </tr>
+        <tr>
+            <td>Final Payment</td>
+            <td><span class="input-field">{{payment.schedule.final_payment.date}}</span></td>
+            <td><span class="input-field">{{payment.schedule.final_payment.amount}}</span></td>
+        </tr>
+    </table>
+
+    <p>Should any payment become overdue, Client shall be liable for interest at a rate of <span
+            class="input-field">{{payment.late_payment_interest}}</span>% per annum on the outstanding amount.</p>
+
+    <h3>IV. Termination</h3>
+    <p>This Agreement may be terminated by either Party, with or without cause, upon providing <span
+            class="input-field">{{termination.notice_period_days}}</span> days advance written notice to the other
+        Party. Upon termination, Client shall compensate Contractor for all services rendered through the effective date
+        of termination.</p>
+
+        <!-- END_SECTION: Section_0_4 -->
+         
+        <!-- SECTION: {"key": "Section_5_14", "order": 6, "type": "legal", "hasVariables": false} -->
+        <h3>V. Intellectual Property</h3>
+        <p>Intellectual Property refers to any intangible creations of the mind, such as artistic or literary works, designs, images, names (including trade names), trademarks, logos, symbols, patents, copyrights, designs, architecture, concepts, and other items used in commerce. As outlined in this Agreement, the Client's use of the Intellectual Property will not be restricted in any way. Any Intellectual Property acquired by the Contractor during the term of this Agreement shall only be used for the purposes of fulfilling this Agreement. In the event that an intellectual creation is developed by the Contractor during the term of this Agreement, the Parties agree that the intellectual property rights for such creations shall belong to the Client, specifically for the purposes of this Agreement.</p>
+        
+        <h3>VI. No Employer-Employee Relationship</h3>
+        <p>The Parties acknowledge that this Agreement does not create an employer-employee relationship. Both Parties are independent contractors, and this Agreement does not form a partnership or joint venture but is solely a contract for service. The Client is not responsible for paying or contributing to the Contractor's social security, taxes, unemployment, workers' compensation, insurance premiums, or any other benefits provided to the Client’s employees.</p>
+        
+        <h3>VII. Return of Client's Property</h3>
+        <p>In the event that this Agreement is terminated or upon the Client's request, the Contractor agrees to return any and all property owned by the Client. Any digital or electronic data may be deleted upon the Client’s request, or physical records may be destroyed at the Client's request if returning such documents or data containing confidential information is not possible.</p>
+        
+
+    <h3>VIII. Indemnification</h3>
+    <p>
+        Subject to any breach provisions herein, each Party agrees to indemnify, defend, and hold harmless the other
+        Party, including its agents, affiliates, officers, and employees, from and against any claims, losses, damages,
+        penalties, liabilities, and expenses of any nature arising from or in connection with any acts or omissions in
+        the performance of this Agreement. Such indemnification obligation shall survive the termination or expiration
+        of this Agreement.
+    </p>
+
+    <h3>IX. Amendments</h3>
+    <p>
+        Any modifications, amendments, or alterations to this Agreement shall have no force or effect unless made in
+        writing and executed by both Parties. Oral amendments or modifications shall have no binding effect.
+    </p>
+
+    <h3>X. Time of Essence</h3>
+    <p>
+        Time is of the essence in the performance of all duties and obligations under this Agreement. All deadlines and
+        schedules established herein shall be strictly adhered to, and no extensions shall be granted without proper
+        justification and mutual written consent of both Parties.
+    </p>
+
+    <h3>XI. Assignment</h3>
+    <p>
+        The Contractor shall not assign, delegate, subcontract, or transfer any duties, rights, or responsibilities
+        outlined in this Agreement to any third party without first obtaining express written consent from the Client.
+        Any unauthorized assignment shall be void and constitute a material breach of this Agreement.
+    </p>
+
+    <h3>XII. Severability</h3>
+    <p>
+        Should any provision of this Agreement be deemed invalid or unenforceable by a court of competent jurisdiction,
+        such invalidity shall be limited to the specific provision in question, and all other provisions shall remain in
+        full force and effect. The invalid provision shall be modified or reformed to the extent necessary to make it
+        valid and enforceable while preserving its intent.
+    </p>
+
+    <h3>XIII. Non-Waiver</h3>
+    <p>
+        The failure of either Party to enforce strict compliance with any provision of this Agreement shall not
+        constitute a waiver of that Party's right to subsequently enforce such provision or any other provision. No
+        waiver of any term, condition, or obligation of this Agreement shall be valid unless made in writing and signed
+        by the waiving Party.
+    </p>
+
+    <h3>XIV. Entire Agreement</h3>
+    <p>
+        This Agreement constitutes the complete and exclusive statement of understanding between the Parties,
+        superseding all prior or contemporaneous proposals, communications, and agreements, whether oral or written,
+        relating to the subject matter hereof. No representations, understandings, agreements, warranties, or conditions
+        shall affect or modify the terms herein unless expressly stated in this Agreement.
+    </p>
+
+        <!-- END_SECTION: Section_5_14 -->
+
+        <!-- SECTION: {"key": "Section_15_16", "order": 7, "type": "legal", "hasVariables": true} -->
+
+    <h3>XV. Governing Law</h3>
+    <p>This Agreement shall be governed by and interpreted in accordance with the federal laws and the laws of the State
+        of <span class="input-field">{{contract.governing_law}}</span>.</p>
+
+    <div class="signature-section">
+        <div class="signature-block">
+            <h3>Contractor</h3>
+            <p>Name: <span class="input-field">{{contractor.name}}</span></p>
+            <p>Date: <span class="input-field">{{contractor.signature_date}}</span></p><br><br>
+            <p>Signature: <span style="color:#f5f5f5">**signature_1**/</span></p>
+        </div>
+        <div class="signature-block">
+            <h3>Client</h3>
+            <p>Name: <span class="input-field">{{client.name}}</span></p>
+            <p>Date: <span class="input-field">{{client.signature_date}}</span></p><br><br>
+            <p>Signature: <span style="color:#f5f5f5">**signature_2**/</span></p>
+        </div>
+        <!-- END_SECTION: Section_15_16 -->
+
+        <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+
+    </div>
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

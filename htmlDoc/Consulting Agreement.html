@@ -1,0 +1,391 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulting Agreement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      /* Changed from 20px to 0 */
+      line-height: 1.6;
+    }
+
+    /* Add a container class */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 60px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      text-decoration: underline;
+    }
+
+    /* Rest of your CSS remains the same */
+    .section {
+      margin: 20px 0;
+    }
+
+    .spacer {
+      display: inline-block;
+      width: 200px;
+      border-bottom: 1px dotted #000;
+    }
+
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .signature-block {
+      text-align: center;
+      width: 45%;
+    }
+
+    .signature-block p {
+      margin: 10px 0;
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+
+  <script>
+
+let inputs = {
+      // Common Contract Information
+      contract: {
+        name: "Consulting Agreement",
+        current_date: new Date().toLocaleDateString(),
+        date: "2021-01-01",
+        start_date: "2021-01-01",
+        services: ["Strategic Planning", "Market Analysis", "Process Optimization"],
+      },
+
+      // Legal and Financial Terms
+      // Can be negotiated between parties
+      // You probably should notify all parties if you change these values
+      terms: {
+        jurisdiction: "New York",
+        duration: "2 years",
+        payment_method: "Bank Transfer",  // Can be specified per agreement
+        amount: "$20,000",
+        late_fee: "$2,000",
+        penalty: "$USD 10,000 (ten thousand US dollars)",
+        time_period: "quarterly"
+      },
+
+      // Consultant Information
+      consultant: {
+        company_name: "ACME Consulting Company",
+        full_name: {
+          first_name: "Alice",
+          last_name: "Smith"
+        },
+        address: {
+          street: "456 Corporate Blvd",
+          city: "Metropolis",
+          state: "NY",
+          zip: "67890"
+        },
+        state: "NY",
+        country: "USA",
+        geographical_area: "New York"
+      },
+
+      // Client Information
+      client: {
+        full_name: {
+          first_name: "John",
+          last_name: "Doe"
+        },
+        address: {
+          street: "123 Main St",
+          city: "Anytown",
+          state: "CA",
+          zip: "12345"
+        },
+        state: "CA",
+        country: "USA",
+      }
+    };
+
+
+
+  </script>
+
+
+</head>
+
+<!-- END_SECTION: documentHead -->
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+  <div class="container">
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+    <h1>CONSULTING AGREEMENT</h1>
+    <!-- END_SECTION: agreementTitle -->
+
+    <!-- SECTION: {"key": "partiesSection_1", "order": 5, "type": "legal", "hasVariables": true} -->
+
+    <div class="section">
+      <p>
+        This Consulting Agreement (the <strong>"Agreement"</strong>) is entered into by and between the parties below
+        on <u>{{contract.current_date}}</u>.
+      </p>
+      <p>
+        <strong>{{consultant.company_name}}</strong>, a registered company located at
+        <u>{{consultant.address.street}}, {{consultant.address.city}}, {{consultant.address.state}},
+          {{consultant.address.zip}}</u>,
+        (hereby referred to as the <strong>"Consultant"</strong>), and:
+      </p>
+      <p>
+        <u>{{client.full_name.first_name}} {{client.full_name.last_name}}</u>, whose address is at
+        <u>{{client.address.street}}, {{client.address.city}}, {{client.address.state}}, {{client.address.zip}}</u>
+        (hereby referred to as the <strong>"Client"</strong>).
+      </p>
+    </div>
+
+    <div class="section">
+      <p>
+        WHEREAS, the Client desires to obtain the services of the Company as detailed below:
+      </p>
+      <ul style="list-style-type: disc; width: 100%; padding-left: 20px; margin: 0;">
+        <li class="spacer" style="display: block; width: 90%; margin-bottom: 8px;">
+          {{contract.services[0]}}
+        </li>
+        <li class="spacer" style="display: block; width: 90%; margin-bottom: 8px;">
+          {{contract.services[1]}}
+        </li>
+        <li class="spacer" style="display: block; width: 90%; margin-bottom: 8px;">
+          {{contract.services[2]}}
+        </li>
+      </ul>
+    </div>
+    <p>
+      <strong>NOW THEREFORE</strong>, for and in consideration of the mutual covenants made by the parties hereto,
+      the Parties to this agreement agree to the terms and conditions below:
+    </p>
+    <!-- END_SECTION: partiesSection_1 -->
+
+
+    <!-- SECTION: {"key": "sections_1_2", "order": 6, "type": "legal", "hasVariables": false} -->
+
+
+    <div>
+      <h1>Terms and Conditions</h1>
+      <p><strong>1. Scope of the Agreement:</strong></p>
+      <p>
+        This Agreement outlines the provision of services by the Consultant
+        to
+        the Client as described above, in exchange for a specified fee. The consultancy services are strictly confined
+        to
+        the matters detailed herein. Any modifications to the scope of this Agreement, whether expansion or limitation,
+        shall require mutual written consent from both parties.
+      </p>
+
+      <strong>2. Principles of Consultancy:</strong>
+      <ul>
+        <li>The Consultant shall not claim any commercial rights over works created within the scope of the consulting
+          service, nor use the developed products elsewhere for personal benefit.</li>
+        <li>The Consultant shall operate based on information provided by the Client and shall not be held responsible
+          for
+          any adverse outcomes, losses, or damages caused by incomplete or incorrect information provided by the Client.
+        </li>
+        <li>The Consultant shall present ideas and suggestions to the Client in writing, relying on their expertise and
+          knowledge.</li>
+        <li>The Client retains full discretion to adhere to, partially implement, or disregard the information and ideas
+          provided by the Consultant, and assumes all responsibility for such actions in the post-delivery process.</li>
+        <li>The Consultant shall strive to fulfill the obligations of this Agreement to the best of their ability.
+          However, if the Client deems the service inadequate or unsatisfactory, the Consultant agrees not to seek any
+          material or moral compensation, except for termination of the Agreement.</li>
+        <li>Neither party shall transfer the rights or obligations established under this Agreement to any third-party
+          individuals or entities.</li>
+      </ul>
+      <!-- END_SECTION: sections_1_2 -->
+
+      <!-- SECTION: {"key": "sections_3_4", "order": 7, "type": "legal", "hasVariables": true} -->
+      <p><strong>3. Financial Provisions:</strong></p>
+      <ul>
+        <li>
+          The total service fee to be paid under this Agreement is <strong>{{terms.amount}}</strong>, payable every
+          <strong>{{terms.time_period}}</strong> of the month.
+        </li>
+        <li>Payments shall be made via <strong>{{terms.payment_method}}</strong>.</li>
+        <li>
+          If the Client fails to pay within five (5) days after the due date, late charges of
+          <strong>{{terms.late_fee}}</strong>
+          shall be applied.
+        </li>
+      </ul>
+
+      <p><strong>4. Term:</strong></p>
+      <ul>
+        <li>
+          This Agreement becomes effective on <strong>{{contract.start_date}}</strong> and remains in force for
+          <strong>{{terms.duration}}</strong>.
+        </li>
+        <li>
+          At the end of this period, the parties may decide to:
+          <ul>
+            <li>Extend the term of this Agreement under the same conditions in writing, or</li>
+            <li>Sign a new Agreement if the Client wishes to continue receiving consultancy services.</li>
+          </ul>
+        </li>
+      </ul>
+      <!-- END_SECTION: sections_3_4 -->
+
+
+      <!-- SECTION: {"key": "sections_5_6_7", "order": 8, "type": "legal", "hasVariables": false} -->
+      <p><strong>5. Termination:</strong></p>
+      <ul>
+        <li>The contract will expire automatically after 30 days unless otherwise agreed by the parties.</li>
+        <li>
+          If the Client wishes to terminate this Agreement, a written notice of 30 days must be submitted to the
+          Consultant.
+          <ul>
+            <li>All debts not yet due under the Agreement shall become immediately payable to the Consultant.</li>
+          </ul>
+        </li>
+        <li>
+          If any law or regulation renders the obligations of either party non-executable, the Agreement shall
+          automatically
+          terminate on the date of such occurrence.
+          <ul>
+            <li>The Consultant will not be entitled to any receivables after the termination date and cannot claim
+              compensation.</li>
+          </ul>
+        </li>
+        <li>
+          If the Client fails to pay the fees under this Agreement within 15 days, the Consultant reserves the right to:
+          <ul>
+            <li>Suspend its obligations under this Agreement, and</li>
+            <li>Immediately terminate the Agreement.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p><strong>6. Intellectual Property:</strong></p>
+      <ul>
+        <li>All proprietary rights to work products resulting from the Consulting Services, including but not limited to
+          copyrights and patents, shall belong to the Client.</li>
+        <li>The Consultant agrees not to claim ownership of any intangible property created through the services
+          provided
+          to the Client, either before or after the completion and delivery of such work.</li>
+      </ul>
+
+      <p><strong>7. Confidentiality:</strong></p>
+      <ul>
+        <li>The Consultant agrees to maintain the confidentiality of all information disclosed under this Agreement
+          ("Confidential Information").</li>
+        <li>The Consultant shall not disclose or transmit any Confidential Information to third parties without the
+          written consent of the Client, except where:
+          <ul>
+            <li>Mandatory notification to statutory bodies or governmental authorities is required by law.</li>
+          </ul>
+        </li>
+        <li>The Consultant shall prevent the unauthorized dissemination of Confidential Information.</li>
+        <li>The confidentiality obligations outlined in this section shall survive the termination of this Agreement for
+          any reason.</li>
+      </ul>
+
+      <!-- END_SECTION: sections_5_6_7 -->
+
+      <!-- SECTION: {"key": "sections_8_9_10", "order": 9, "type": "legal", "hasVariables": true} -->
+      <p><strong>8. Prohibition on Competition:</strong></p>
+      <p>
+        The Consultant acknowledges that the information provided by the
+        Client represents unique and valuable assets. As such, the Consultant agrees that for a period of
+        <strong>{{terms.duration}}</strong> years following the termination of this Agreement—whether voluntary or
+        involuntary—they shall not engage directly or indirectly in any business competitive with the Client's. This
+        restriction applies to the geographical area of <strong>{{consultant.geographical_area}}</strong>. Competitive
+        activities
+        include, but are not limited to, acting as an owner, partner, or agent in such businesses, becoming an employee
+        of
+        a
+        competitor, or soliciting the Client’s customers for the benefit of a third party. In the event of a breach of
+        this
+        non-competition clause, the Client will issue a written notice requesting immediate compliance. If the
+        Consultant
+        fails to comply within thirty (30) days, they shall pay a penalty of {{terms.penalty}}. This
+        penalty does not absolve the Consultant from their obligation to adhere to this clause.
+      </p>
+
+      <p><strong>9. Miscellaneous:</strong></p>
+      <p>
+
+        <em>Amendments:</em> Any amendments to this Agreement shall only be valid if made in writing and signed by both
+        Parties.
+        <em>Severability:</em> If any provision of this Agreement is deemed invalid or unenforceable, the remaining
+        provisions shall remain valid and enforceable.
+        <em>Governing Law and Dispute Resolution:</em> This Agreement is governed by and construed in accordance with
+        the
+        laws of <strong>{{terms.jurisdiction}}</strong>. Any disputes related to this Agreement, including questions of
+        validity or termination, shall be resolved by the courts and execution offices of
+        <strong>{{terms.jurisdiction}}</strong>.
+        <em>Notifications:</em> All notifications under this Agreement must be in writing and delivered to the addresses
+        specified herein. If a party’s address changes and the other party is not informed, notifications sent to the
+        previously indicated address will be deemed legally valid.
+        <em>Entire Agreement:</em> This Agreement represents the entire understanding between the Parties, superseding
+        any
+        prior written or oral agreements related to its subject matter.
+      </p>
+
+    </div>
+
+
+
+    <div class="section">
+      <p>
+        <strong>IN WITNESS WHEREOF</strong>, each of the Parties has executed this Consulting Agreement; both Parties
+        by its duly authorized officer, as of the day and year set forth below.
+      </p>
+    </div>
+    <div class="signature-section">
+      <div class="signature-block">
+        <p><strong>Consultant</strong></p>
+        <br />
+        <p>Name: {{consultant.full_name.first_name}} {{consultant.full_name.last_name}}</p>
+        <br />
+        <p>Date: {{contract.current_date}}</p>
+        <br />
+        <p>Signature:  <span style="color:#f5f5f5">**signature_1**/</span></p>
+      </div>
+      <div class="signature-block">
+        <p><strong>Client</strong></p>
+        <br />
+        <p>Name: {{client.full_name.first_name}} {{client.full_name.last_name}}</p>
+        <br />
+        <p>Date: {{contract.current_date}}</p>
+        <br />
+        <p>Signature:  <span style="color:#f5f5f5">**signature_2**/</span></p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>End of Agreement</p>
+    </div>
+    <!-- END_SECTION: sections_8_9_10 -->
+
+
+    <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+  </div>
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

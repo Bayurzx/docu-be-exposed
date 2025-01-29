@@ -1,0 +1,325 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright Transfer Agreement</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 60px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 24px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f4f4f4;
+        }
+
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .signature-block {
+            width: 45%;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+
+    <script>
+        let inputs = {
+            contract: {
+                name: "Copyright Assignment Agreement",
+                current_date: "01/26/2025",
+                governing_law: "California",
+                jurisdiction: "Los Angeles County Superior Court",
+                execution_date: "01/26/2025"
+            },
+            transferor: {
+                address: {
+                    street: "123 Main St",
+                    street_line_2: "Suite 100",
+                    city: "Los Angeles",
+                    state: "CA",
+                    postal: "90001",
+                    country: "USA"
+                },
+                phone: "(555) 123-4567",
+                email: "johndoe@email.com",
+                signature: {
+                    name: "John Doe",
+                    date: "01/26/2025",
+                }
+            },
+            transferee: {
+                address: {
+                    street: "456 Elm St",
+                    street_line_2: "Apt 202",
+                    city: "San Francisco",
+                    state: "CA",
+                    postal: "94102",
+                    country: "USA"
+                },
+                phone: "(555) 987-6543",
+                email: "janesmith@email.com",
+                signature: {
+                    name: "Jane Smith",
+                    date: "01/26/2025",
+                }
+            },
+            work: {
+                name: "Shining Bright",
+                description: "Original song composition and lyrics titled 'Shining Bright'"
+            }
+        }
+    </script>
+</head>
+
+<!-- END_SECTION: documentHead -->
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <div class="container">
+        <!-- END_SECTION: bodyStart -->
+
+        <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+
+        <h1>Copyright Assignment Agreement</h1>
+        <!-- END_SECTION: agreementTitle -->
+
+        <!-- SECTION: {"key": "partiesSection_1", "order": 5, "type": "legal", "hasVariables": true} -->
+        <div class="section">
+            <h3>I. Contracting Parties</h3>
+            <p>
+                This Assignment of Copyright Agreement (hereinafter designated as the <strong>"Agreement"</strong>)
+                is entered into between the following parties:
+            </p>
+
+            <table class="table">
+                <tr>
+                    <th>Assignor</th>
+                    <th>Assignee</th>
+                </tr>
+                <tr>
+                    <td>
+                        {{transferor.address.street}}<br>
+                        {{transferor.address.street_line_2}}<br>
+                        {{transferor.address.city}}, {{transferor.address.state}} {{transferor.address.postal}}<br>
+                        {{transferor.address.country}}<br>
+                        Phone: {{transferor.phone}}<br>
+                        Email: {{transferor.email}}
+                    </td>
+                    <td>
+                        {{transferee.address.street}}<br>
+                        {{transferee.address.street_line_2}}<br>
+                        {{transferee.address.city}}, {{transferee.address.state}} {{transferee.address.postal}}<br>
+                        {{transferee.address.country}}<br>
+                        Phone: {{transferee.phone}}<br>
+                        Email: {{transferee.email}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <p>
+                WHEREAS the Assignor has created and currently holds ownership of {{work.name}} (hereinafter
+                referred to
+                as the <strong>"Work"</strong>) detailed below;
+            </p>
+            <table class="table">
+                <tr>
+                    <td>{{work.description}}</td>
+                </tr>
+            </table>
+
+            <p>
+                WHEREAS the Assignee seeks to acquire ownership of the Work's copyright for commercial exploitation and
+                distribution purposes, and the Assignor consents to transfer these rights under the terms and conditions
+                outlined in this document;
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                NOW, THEREFORE, in light of the mutual promises contained herein, both parties hereby agree to the
+                following:
+            </p>
+        </div>
+        <!-- END_SECTION: partiesSection_1 -->
+
+        <!-- SECTION: {"key": "Section_2", "order": 6, "type": "legal", "hasVariables": false} -->
+        <div class="section">
+            <h3>II. Copyright Assignment</h3>
+            <p>
+                The Assignor hereby permanently transfers and conveys to the Assignee complete ownership, title, and
+                interest in the Work's copyright, encompassing all rights granted under copyright law and any related
+                intellectual property rights associated with the Work.
+            </p>
+            <p>
+                This assignment encompasses, without limitation, the exclusive rights to reproduce, distribute, exhibit
+                publicly,
+                and develop derivative works based on the Work. However, this transfer explicitly excludes any right to
+                alter the Work and shall not be interpreted to grant such authority.
+            </p>
+        </div>
+
+        <!-- END_SECTION: Section_2 -->
+
+        <!-- SECTION: {"key": "Section_3", "order": 7, "type": "legal", "hasVariables": true} -->
+        <div class="section">
+            <h3>III. Duration and Cessation</h3>
+            <p>
+                This Agreement shall commence on {{contract.current_date}}, and the rights granted herein may
+                only be exercised during the specified term in accordance with this Agreement's provisions.
+            </p>
+            <p>
+                The Agreement's duration will not automatically extend beyond its expiration date unless a new agreement
+                is executed prior to termination.
+            </p>
+            <p>
+                Prior to the conclusion of the fixed term, this Agreement may be dissolved through mutual written
+                consent of both the Assignor and Assignee.
+            </p>
+            <p>
+                Should either party fail to fulfill a fundamental obligation under this Agreement, the other party may
+                terminate by providing written notification. The party in breach shall have thirty (30) days following
+                receipt of such notice to remedy the violation. Failure to cure within
+                this timeframe shall result in immediate termination.
+            </p>
+            <p>
+                Upon Agreement termination, the Assignee must discontinue all usage of the transferred copyright, and
+                all rights and interests in the Work shall revert to the Assignor.
+            </p>
+        </div>
+        <!-- END_SECTION: Section_3 -->
+
+        <!-- SECTION: {"key": "Section_4_5", "order": 8, "type": "legal", "hasVariables": false} -->
+        <div class="section">
+            <h3>IV. Declarations and Guarantees</h3>
+            <p>
+                The Assignor affirms and guarantees their status as the exclusive creator and rightful owner of the
+                Work, possessing full authority to transfer the associated copyright. The Assignor certifies that the
+                Work constitutes original material and does not violate any third party's intellectual property rights.
+            </p>
+            <p>
+                Any claims or demands for compensation submitted to the Assignee alleging intellectual property or moral
+                rights infringement shall be directed to and handled by the Assignor.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>V. Financial Compensation</h3>
+            <p>
+                As consideration for this copyright transfer, the Assignee shall remit to the Assignor a sum to be
+                agreed upon within thirty (30) days of this Agreement's effective date.
+            </p>
+            <p>
+                Furthermore, the Assignor shall receive an agreed percentage of revenue generated through
+                sales. All payments specified in this Agreement shall be processed via wire transfer.
+            </p>
+        </div>
+        <!-- END_SECTION: Section_4_5 -->
+
+        <!-- SECTION: {"key": "Section_6_7", "order": 9, "type": "legal", "hasVariables": true} -->
+        <div class="section">
+            <h3>VI. Miscellaneous</h3>
+            <p>
+                <strong>Entire Agreement</strong> - This Agreement constitutes the entire understanding between the
+                parties and supersedes all prior agreements, oral or written, between the parties.
+            </p>
+            <p>
+                <strong>Notifications</strong> - Any notice, request, demand, or other communication required or
+                permitted by this Agreement shall be in writing and shall be deemed given when delivered personally, or
+                by email, or mailed by certified or registered mail (postage prepaid, return receipt requested) to the
+                addresses indicated in the first page of this Agreement.
+            </p>
+            <p>
+                <strong>Governing Law</strong> - This Agreement shall be governed by and construed in accordance with
+                the applicable federal law and the laws of the State of {{contract.governing_law}}. Any legal action or
+                proceeding
+                arising out of or relating to this Agreement shall be brought in the courts located in
+                {{contract.jurisdiction}}.
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                <strong>IN WITNESS WHEREOF</strong>, the parties have executed this Copyright Assignment Agreement as of
+                {{contract.execution_date}}.
+            </p>
+
+            <table class="table">
+                <tr>
+                    <th>Assignor</th>
+                    <th>Assignee</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>Name:</strong> {{transferor.signature.name}}</p>
+                        <p><strong>Date:</strong> {{transferor.signature.date}}</p>
+                        <p><strong>Signature:</strong></p>
+                        <p><span style="color:#f5f5f5">**signature_1**/</span></p>
+                    </td>
+                    <td>
+                        <p><strong>Name:</strong> {{transferee.signature.name}}</p>
+                        <p><strong>Date:</strong> {{transferee.signature.date}}</p>
+                        <p><strong>Signature:</strong></p>
+                        <p><span style="color:#f5f5f5">**signature_2**/</span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Agreement Conclusion</p>
+        </div>
+        <!-- END_SECTION: Section_6_7 -->
+
+
+        <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+    </div>
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

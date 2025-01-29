@@ -1,0 +1,284 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Supply Agreement</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .pdf-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+    <script>
+        const inputs = {
+            contractName: 'Supply Agreement',
+            company: {
+                name: 'Global Tech Solutions',
+                street: '789 Tech Park Blvd.',
+                city: 'Innovation City',
+                state: 'CA',
+                postalCode: '94016',
+                country: 'USA'
+            },
+            supplier: {
+                name: 'Superior Supplies Ltd.',
+                street: '456 Supply Rd.',
+                city: 'Commerce Town',
+                state: 'NY',
+                postalCode: '10022',
+                country: 'USA',
+                date: '2025-01-25'
+            },
+            products: [
+                { name: 'Laptop', description: '14-inch high-performance laptop', price: '1200' },
+                { name: 'Mouse', description: 'Wireless ergonomic mouse', price: '50' },
+                { name: 'Keyboard', description: 'Mechanical keyboard with backlighting', price: '100' },
+                { name: 'Monitor', description: '27-inch 4K display', price: '350' }
+            ],
+            deliveryDays: '30',
+            terminationNoticeDays: '60',
+            remedyPeriodDays: '30',
+            paymentTermDays: '45',
+            interestRate: '5%',
+            warrantyPeriod: '12 months',
+            governingState: 'California',
+            supplierSignature: {
+                signature: 'John Doe',
+                firstName: 'John',
+                lastName: 'Doe',
+                date: '2025-01-25'
+            },
+            companySignature: {
+                signature: 'Jane Smith',
+                firstName: 'Jane',
+                lastName: 'Smith',
+                date: '2025-01-25'
+            }
+        };
+    </script>
+</head>
+<!-- END_SECTION: documentHead -->
+
+
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <div class="pdf-container">
+        <!-- END_SECTION: bodyStart -->
+
+        <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+        <h1>Supply Agreement</h1>
+        <!-- END_SECTION: agreementTitle -->
+
+
+        <!-- SECTION: {"key": "partiesSection_1", "order": 5, "type": "legal", "hasVariables": true} -->
+        <h2>I. Agreement Parties</h2>
+        <p>
+            This Supply Agreement (the "Agreement") is executed by and between <b>{{company.name}}</b> with registered
+            office
+            at <b>{{company.street}}</b>, <b>{{company.city}}</b>, <b>{{company.state}}</b>
+            <b>{{company.postalCode}}</b>, <b>{{company.country}}</b>
+            (hereinafter referred to as the "Company") and <b>{{supplier.name}}</b> with registered office at
+            <b>{{supplier.street}}</b>, <b>{{supplier.city}}</b>, <b>{{supplier.state}}</b>
+            <b>{{supplier.postalCode}}</b>, <b>{{supplier.country}}</b>
+            (hereinafter referred to as the "Supplier") on <b>{{supplier.date}}</b>.
+        </p>
+
+        <p>
+            CONSIDERING that the Supplier operates in the business of providing specific goods as outlined below;<br>
+            CONSIDERING that the Company seeks to purchase specific goods from the Supplier;<br>
+            NOW, THEREFORE, in exchange for the mutual promises and obligations detailed herein, the Company and the
+            Supplier (each a "Party" and together, the "Parties") hereby agree as follows:
+        </p>
+        <!-- END_SECTION: partiesSection_1 -->
+
+        <!-- SECTION: {"key": "partiesSection_2_6", "order": 6, "type": "legal", "hasVariables": true} -->
+        <h2>II. Supply of Goods</h2>
+        <p>The Supplier agrees to provide the following items (hereinafter referred to as the "Products"):</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{products[0].name}}</td>
+                    <td>{{products[0].description}}</td>
+                    <td>{{products[0].price}}</td>
+                </tr>
+                <tr>
+                    <td>{{products[1].name}}</td>
+                    <td>{{products[1].description}}</td>
+                    <td>{{products[1].price}}</td>
+                </tr>
+                <tr>
+                    <td>{{products[2].name}}</td>
+                    <td>{{products[2].description}}</td>
+                    <td>{{products[2].price}}</td>
+                </tr>
+                <tr>
+                    <td>{{products[3].name}}</td>
+                    <td>{{products[3].description}}</td>
+                    <td>{{products[3].price}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>III. Duration and Termination</h2>
+        <p>
+            This agreement is established for an indefinite duration on a per-order basis. Product delivery must be
+            completed within {{deliveryDays}} days of order placement by the Company.
+        </p>
+        <p>
+            Either Party may terminate this Agreement without penalty by providing {{terminationNoticeDays}} days'
+            advance notice.
+        </p>
+        <p>
+            Should any Party fail to meet their obligations under this Agreement and not address the breach within
+            {{remedyPeriodDays}} business days of receiving written notification, the Agreement may be terminated
+            immediately without compensation.
+        </p>
+
+        <h2>IV. Ordering, Pricing and Payment Terms</h2>
+        <p>
+            All transactions require a written invoice. Orders must be submitted in writing with detailed product
+            specifications and quantities.
+        </p>
+        <p>
+            Listed prices include VAT and applicable taxes. Each order is invoiced separately. Prices remain fixed for
+            one year from the Agreement's effective date. The Supplier must submit updated pricing after one year, or
+            existing prices continue.
+        </p>
+        <p>
+            Payment is due within {{paymentTermDays}} days of invoice receipt. Late payments incur a {{interestRate}}%
+            daily interest charge.
+        </p>
+
+        <h2>V. Transportation Insurance</h2>
+        <p>
+            Risk transfers to the Company upon delivery. The Supplier must maintain appropriate shipping insurance. The
+            Supplier bears responsibility for uninsured shipping losses or damages.
+        </p>
+
+        <h2>VI. Product Guarantee</h2>
+        <p>
+            Products must meet specified technical and quality standards and be defect-free. Defective items not damaged
+            by the Company must be replaced or repaired within {{warrantyPeriod}} at no cost, or the Company will be
+            reimbursed.
+        </p>
+        <!-- END_SECTION: partiesSection_2_6 -->
+
+
+        <!-- SECTION: {"key": "partiesSection", "order": 7, "type": "legal", "hasVariables": true} -->
+        <h2>VII. Force Majeure</h2>
+        <p>
+            The Supplier is exempt from liability for delays due to force majeure events including earthquakes, floods,
+            war, or severe weather preventing delivery. The Supplier must promptly notify the Company in writing of such
+            incidents.
+        </p>
+
+        <h2>VIII. Additional Terms</h2>
+        <p>
+            <strong>SEVERABILITY:</strong> Each provision stands independently. If any provision is deemed invalid,
+            remaining provisions retain their validity.
+        </p>
+        <p>
+            <strong>MODIFICATIONS:</strong> Changes require written documentation signed by authorized representatives
+            of both Parties.
+        </p>
+        <p>
+            <strong>ASSIGNMENT:</strong> Rights and obligations cannot be transferred without written consent from the
+            other Party.
+        </p>
+        <p>
+            <strong>NON-WAIVER:</strong> Failure to enforce any provision does not constitute waiver of rights.
+        </p>
+
+        <!-- END_SECTION: partiesSection -->
+
+
+        <!-- SECTION: {"key": "partiesSection_8", "order": 8, "type": "legal", "hasVariables": true} -->
+        <p>
+            <strong>GOVERNING LAW:</strong> This Agreement is governed by the laws of {{governingState}}.
+        </p>
+
+        <p>The Parties confirm their agreement to these terms on the date specified above.</p>
+
+        <table style="border: none;">
+            <tr>
+                <td style="width: 50%; padding: 10px; border: none;">
+                    <strong>The Supplier:</strong><br><br>
+                    Signature: <span style="color: #f5f5f5;"> **signature_1**/ </span><br><br><br>
+                    Name: {{supplierSignature.firstName}} {{supplierSignature.lastName}}<br><br>
+                    Date: {{supplierSignature.date}}
+                </td>
+                <td style="width: 50%; padding: 10px; border: none;">
+                    <strong>The Company:</strong><br><br>
+                    Signature: <span style="color: #f5f5f5;"> **signature_2**/ </span><br><br><br>
+                    Name: {{companySignature.firstName}} {{companySignature.lastName}}<br><br>
+                    Date: {{companySignature.date}}
+                </td>
+            </tr>
+        </table>
+
+        <!-- END_SECTION: partiesSection_8 -->
+
+        <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+    </div>
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

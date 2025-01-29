@@ -1,0 +1,383 @@
+<!-- html -->
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidentiality Agreement</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .pdf-container {
+      background: white;
+      padding: 40px;
+      margin: auto;
+      max-width: 800px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    /* Headers */
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Paragraphs */
+    p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e6e6e6;
+      font-weight: bold;
+    }
+
+    /* Signature sections */
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    .signature-block {
+      text-align: center;
+      width: 45%;
+      font-size: 14px;
+    }
+
+    .spacer {
+      display: inline-block;
+      width: 200px;
+      border-bottom: 1px solid #333;
+    }
+
+    .underlinedText {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    /* Footer section */
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+
+  <script>
+    // remember to duplicate for person 2
+    const inputs = {
+      person_1: {
+        full_name: {
+          first_name: 'John',
+          last_name: 'Doe'
+        },
+        address: {
+          street: '123 Main St',
+          city: 'Anytown',
+          state: 'CA',
+          zip: '12345'
+        },
+        state: 'CA',
+        country: 'USA',
+        current_date: new Date().toLocaleDateString(),
+        date: '2021-01-01',
+        contract_name: 'Mr. John Doe Confidentiality Agreement',
+        contract_type: 'Confidentiality Agreement',
+        jurisdiction: 'California',
+
+      },
+      person_2: {
+        full_name: {
+          first_name: 'Jane',
+          last_name: 'Smith'
+        },
+        address: {
+          street: '456 Oak Rd',
+          city: 'Othertown',
+          state: 'NY',
+          zip: '67890'
+        },
+        state: 'NY',
+        country: 'USA',
+      }
+    };
+
+
+  </script>
+</head>
+<!-- END_SECTION: documentHead -->
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+  <div class="pdf-container">
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "confidentialityAgreement", "order": 4, "type": "content", "hasVariables": false} -->
+    <h1>CONFIDENTIALITY AGREEMENT</h1>
+    <!-- END_SECTION: agreementTitle -->
+
+
+    <!-- SECTION: {"key": "partiesSection_1", "order": 5, "type": "legal", "hasVariables": true} -->
+    <p>This Confidentiality Agreement (the "Agreement") is made on <span
+        class="spacer">{{person_1.current_date}}</span>.</p>
+    <p>By and between:</p>
+    <table>
+      <tr>
+        <th>Party 1</th>
+        <th>Party 2</th>
+      </tr>
+      <tr>
+        <td>
+          Name: <span class="spacer">{{person_1.full_name.first_name}} {{person_1.full_name.last_name}}</span><br>
+          Address: <span class="spacer">{{person_1.address.street}}, {{person_1.address.city}},
+            {{person_1.address.state}} {{person_1.address.zip}}, {{person_1.country}}</span>
+        </td>
+        <td>
+          Name: <span class="spacer">{{person_2.full_name.first_name}} {{person_2.full_name.last_name}}</span><br>
+          Address: <span class="spacer">{{person_2.address.street}}, {{person_2.address.city}},
+            {{person_2.address.state}} {{person_2.address.zip}}, {{person_2.country}}</span>
+        </td>
+      </tr>
+    </table>
+
+    <div class="section">
+      <h2>I. Recitals</h2>
+      <p>
+        WHEREAS, the Parties of this Agreement executed a contract named <span
+          class="spacer">{{person_1.contract_name}}</span> on
+        <span class="spacer">{{person_1.date}}</span>, and they wish to set forth the terms and conditions of their
+        non-disclosure
+        commitments via a separate agreement.
+      </p>
+      <p>
+        Under this Agreement, the parties are referred to individually as "Disclosing Party" or "Receiving Party,"
+        depending on their role in disclosing or receiving confidential information.
+      </p>
+    </div>
+    <!-- END_SECTION: partiesSection_1 -->
+
+
+    <!-- SECTION: {"key": "partiesSection_2_10", "order": 6, "type": "legal", "hasVariables": false} -->
+
+    <div class="section">
+      <h2>II. Confidential Information</h2>
+      <p>
+        "Confidential Information" refers to all proprietary, non-public, or sensitive information shared between the
+        parties during the course of their commercial relationship. This includes, but is not limited to, business
+        strategies, financial data, technical processes, software, designs, research, and any other materials or
+        knowledge
+        that may give one party a competitive advantage. Confidential Information also includes information received
+        from
+        third parties under confidentiality obligations. Information that is publicly available, obtained through legal
+        means independent of this agreement, or required to be disclosed by law or a court order, is not considered
+        Confidential Information.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>III. Protection of Confidential Information</h2>
+      <p>
+        Both parties agree to exercise the utmost care in safeguarding Confidential Information and to take all
+        reasonable
+        measures to prevent unauthorized access, use, or disclosure. The Confidential Information should be protected
+        with
+        at least the same level of security and caution as each party applies to its own proprietary information, but no
+        less than a reasonable standard of care. Any disclosure of Confidential Information to employees, agents,
+        consultants, or subcontractors will only be permitted when absolutely necessary for the performance of the
+        agreement, and such individuals must be bound by confidentiality obligations equivalent to those in this
+        Agreement. Both parties will be held responsible for ensuring that these individuals adhere to the terms of this
+        Agreement.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>IV. Violation of this Agreement</h2>
+      <p>
+        In the event of a violation or breach of this Agreement, the party aware of the breach must promptly notify the
+        other party in writing. The notice must include details regarding the nature and extent of the breach. The
+        affected party reserves the right to pursue any and all legal remedies available, including but not limited to
+        seeking injunctive relief, specific performance, or damages for any losses incurred as a result of the breach.
+        The
+        breaching party shall be liable for any direct or indirect harm caused by the unauthorized disclosure or misuse
+        of
+        Confidential Information.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>V. Return of Materials Containing Confidential Information</h2>
+      <p>
+        Upon the termination or expiration of this Agreement or the commercial relationship, each party is obligated to
+        return all materials, documents, files, or any other items containing Confidential Information, whether in
+        physical or electronic form. The return of materials must occur within a reasonable timeframe, or if requested,
+        such materials must be destroyed, with proof of destruction provided to the other party. This obligation to
+        return
+        or destroy materials containing Confidential Information applies even after the end of the relationship or the
+        termination of this Agreement, ensuring that no party retains access to sensitive information without
+        authorization.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>VI. Disclosure of Confidential Information</h2>
+      <p>
+        Disclosure of Confidential Information to any third party, or the use of such information for any purpose not
+        expressly authorized by this Agreement, is strictly prohibited. No party shall disclose any part of the
+        Confidential Information to any individual, entity, or organization without obtaining prior written consent from
+        the other party, except when required by law or governmental order. In such cases, the disclosing party must
+        promptly notify the other party to allow them the opportunity to seek protective measures or legal relief before
+        any disclosure is made. Unauthorized disclosure or use of Confidential Information will result in immediate
+        legal
+        action and potential compensation for damages.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>VII. Term and Assignment</h2>
+      <p>
+        This Agreement shall remain in effect until terminated by mutual written consent of both parties. The
+        confidentiality obligations outlined herein shall continue indefinitely, even after the termination of the
+        Agreement, the cessation of the business relationship, or the return of all Confidential Information. Neither
+        party shall assign, transfer, or otherwise delegate any rights or obligations under this Agreement without the
+        prior written consent of the other party. Any unauthorized assignment or transfer will be considered a material
+        breach of this Agreement.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>VIII. Partial Invalidity</h2>
+      <p>
+        In the event that any provision of this Agreement is found to be invalid, illegal, or unenforceable by a court
+        or
+        competent authority, the remaining provisions shall continue to be valid and enforceable to the fullest extent
+        permitted by law. The invalid or unenforceable provision will be replaced with a valid provision that most
+        closely
+        reflects the original intent of the parties, while maintaining the balance of rights and obligations under the
+        Agreement.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>IX. Amendment</h2>
+      <p>
+        Any amendments or modifications to this Agreement must be made in writing and signed by authorized
+        representatives
+        of both parties. No oral agreements or understandings will be considered binding unless confirmed in writing.
+        The
+        written amendment will become part of this Agreement and will supersede any previous provisions that are
+        inconsistent with the new terms.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>X. Notifications</h2>
+      <p>
+        All notifications under this Agreement must be made in writing and delivered either in person, by courier, by
+        registered mail, or via email with read receipt confirmation. Each party shall provide the other with their
+        current contact information, including physical and email addresses, for the purpose of receiving notifications.
+        Notifications are deemed effective on the date of delivery, provided they are sent to the appropriate address as
+        specified in this Agreement.
+      </p>
+    </div>
+    <!-- END_SECTION: partiesSection_2_10 -->
+
+
+
+    <!-- SECTION: {"key": "partiesSection_11_12", "order": 7, "type": "legal", "hasVariables": true} -->
+
+
+    <div class="section">
+      <h2>XI. Governing Law</h2>
+      <p>
+        This Agreement shall be governed by and construed in accordance with the laws of <span
+          class="spacer">{{person_1.jurisdiction}}</span>, without
+        regard to its conflict of law principles. In the event of any dispute arising from or related to this Agreement,
+        the parties agree to submit to the exclusive jurisdiction of the courts in <span
+          class="spacer">{{person_1.jurisdiction}}</span> for the
+        resolution of such disputes. Any proceedings related to this Agreement shall be conducted in the <span
+          class="spacer">{{person_1.jurisdiction}}</span> courts, and the prevailing party shall be entitled to recover
+        all legal costs, including attorney
+        fees, incurred in connection with the dispute.
+      </p>
+    </div>
+
+    <div class="signature-section">
+      <div class="signature-block">
+        <p><span style="color:#f5f5f5">**signature_1**/</span></p>
+        <p>Signature of Party 1</p>
+      </div>
+      <div class="signature-block">
+        <p><span style="color:#f5f5f5">**signature_2**/</span></p>
+        <p>Signature of Party 2</p>
+      </div>
+    </div>
+
+    <div class="signature-section">
+      <div class="signature-block">
+        <p class="underlinedText">{{person_1.full_name.first_name}} {{person_1.full_name.last_name}}</p>
+        <!-- <p>Fullname of Party 1</p> -->
+      </div>
+      <div class="signature-block">
+        <p class="underlinedText">{{person_2.full_name.first_name}} {{person_2.full_name.last_name}}</p>
+        <!-- <p>Fullname of Party 2</p> -->
+      </div>
+
+      <!-- END_SECTION: partiesSection_11_12 -->
+
+      <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+    </div>
+
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

@@ -1,0 +1,4 @@
+{
+    "ignore": ["*.log", "*.tmp", "htmlDoc/*", "htmlDoc/**/*"]
+  }
+  

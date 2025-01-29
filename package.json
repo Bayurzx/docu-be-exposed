@@ -1,0 +1,33 @@
+{
+  "name": "docusign-nodejs-be",
+  "version": "1.0.0",
+  "description": "implementing docusign authentication on my backend server in nodejs.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "docusign",
+    "nodejs"
+  ],
+  "author": "Adebayo Omolumo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "docusign-esign": "^8.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "moment": "^2.30.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.78.1",
+    "puppeteer": "^24.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

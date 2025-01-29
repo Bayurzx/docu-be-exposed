@@ -1,0 +1,205 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- END_SECTION: documentStart -->
+
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Release of Liability Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signature-line {
+            border-top: 1px solid black;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .content {
+            margin: 20px 0;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <script>
+        const inputs = {
+            date: new Date().toLocaleDateString(),
+            releasor: {
+                firstName: "John",
+                lastName: "Doe",
+                streetAddress: "1234 Maple Street",
+                city: "Greenwood",
+                state: "Indiana",
+                postalCode: "46142",
+                country: "USA",
+                signature: "John Doe",
+                signatureDate: "2025-01-26"
+            },
+            releasee: {
+                firstName: "Jane",
+                lastName: "Smith",
+                streetAddress: "5678 Pine Avenue",
+                city: "Lakeside",
+                state: "Michigan",
+                postalCode: "48324",
+                country: "USA",
+                signature: "Jane Smith",
+                signatureDate: "2025-01-26"
+            },
+            amount: "15000",
+            stateName: "Indiana",
+            witnessDate: "2025-01-26",
+            contractName: "Release of Liability Agreement"
+        };
+    </script>
+</head>
+<!-- END_SECTION: documentHead -->
+
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+
+    <div class="header">
+        <h1>RELEASE OF LIABILITY</h1>
+    </div>
+    <!-- END_SECTION: agreementTitle -->
+
+
+    <!-- SECTION: {"key": "Section_1", "order": 5, "type": "legal", "hasVariables": true} -->
+
+    <div class="content">
+        <p>This General Release (hereinafter referred to as the "Agreement") is made on {{date}}, by and between:</p>
+
+        <table>
+            <tr>
+                <td>
+                    <strong>(a) Party Releasing (the "Releasor")</strong><br>
+                    {{releasor.firstName}} {{releasor.lastName}}<br>
+                    {{releasor.streetAddress}}<br>
+                    {{releasor.city}}, {{releasor.state}} {{releasor.postalCode}}<br>
+                    {{releasor.country}}
+                </td>
+                <td>
+                    <strong>(b) Party Being Released (the "Releasee")</strong><br>
+                    {{releasee.firstName}} {{releasee.lastName}}<br>
+                    {{releasee.streetAddress}}<br>
+                    {{releasee.city}}, {{releasee.state}} {{releasee.postalCode}}<br>
+                    {{releasee.country}}
+                </td>
+            </tr>
+        </table>
+
+        <p>FOR VALUABLE CONSIDERATION, the receipt and sufficiency of which is hereby acknowledged, the parties agree to
+            the following terms and conditions:</p>
+
+        <ol>
+            <li>The Releasor, including their affiliates, successors, officers, employees, representatives, partners,
+                agents, and anyone claiming through them, hereby fully releases and discharges the Releasee from any and
+                all claims, liabilities, damages, disputes, obligations, or causes of action, whether known or unknown,
+                arising from the termination of contractual relationships between the parties ("Claims").</li>
+
+
+            <li>As consideration for this release, the Releasee agrees to provide, and the Releasor accepts, a payment
+                of {{amount}} as full settlement and satisfaction of any existing or potential claims.</li>
+
+            <!-- END_SECTION: Section_1 -->
+
+
+            <!-- SECTION: {"key": "Section_2", "order": 6, "type": "legal", "hasVariables": false} -->
+
+            <li>The Releasor confirms that this release is given with the express intention of eliminating certain
+                obligations and permanently binding the Releasor's assignees, heirs, spouse, executors, legal
+                representatives, and administrators.</li>
+
+            <li>This Release shall not be interpreted as an admission of fault or wrongdoing by the Releasee, nor shall
+                it imply any liability or responsibility for any purpose.</li>
+
+            <li>This document represents the complete agreement between the parties and supersedes all previous oral or
+                written agreements regarding the subject matter herein.</li>
+
+            <li>If any provision of this Release is deemed invalid or unenforceable by a court of competent
+                jurisdiction, only that specific provision shall be affected, leaving all other provisions intact.</li>
+
+            <li>Any modifications to this Release must be made in writing and signed by both parties.</li>
+
+            <li>This Release represents a full and final settlement of all claims, losses, and damages related to the
+                aforementioned dispute, with both parties acknowledging their complete understanding of all terms.</li>
+
+            <!-- END_SECTION: Section_2 -->
+
+
+            <!-- SECTION: {"key": "Section_3", "order": 7, "type": "legal", "hasVariables": true} -->
+
+
+
+            <li>This Agreement shall be governed by and interpreted according to the laws of the State of {{stateName}}.
+            </li>
+        </ol>
+
+        <p>IN WITNESS WHEREOF, the parties have executed this Agreement on {{witnessDate}}.</p>
+
+        <table style="margin-top: 50px;">
+            <tr>
+                <td style="width: 50%; border: none;">
+                    <p><strong>RELEASOR:</strong></p>
+                    <p>Name: {{releasor.firstName}} {{releasor.lastName}}</p>
+                    <div class="signature-line"></div>
+                    <p>Signature  <span style="color:#f5f5f5">**signature_1**/</span> </p>
+                    <p>Date: {{releasor.signatureDate}}</p>
+                </td>
+                <td style="width: 50%; border: none;">
+                    <p><strong>RELEASEE:</strong></p>
+                    <p>Name: {{releasee.firstName}} {{releasee.lastName}}</p>
+                    <div class="signature-line"></div>
+                    <p>Signature  <span style="color:#f5f5f5">**signature_2**/</span> </p>
+                    <p>Date: {{releasee.signatureDate}}</p>
+                </td>
+            </tr>
+        </table>
+        <!-- END_SECTION: Section_3 -->
+
+
+        <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+    </div>
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

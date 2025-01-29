@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      # Add other environment variables as needed
+      # - DATABASE_URL=
+      # - API_KEY=
+    # volumes:
+    #   - .:/usr/src/app
+    #   - /usr/src/app/node_modules
+    restart: unless-stopped

@@ -1,0 +1,404 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Agreement</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .pdf-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            min-height: 1100px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        h2,
+        h3 {
+            color: #444;
+            margin-top: 25px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .signature-line {
+            border-top: 1px solid black;
+            margin-top: 50px;
+            padding-top: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .pdf-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <script>
+        const inputs = {
+            // Agreement Date and Parties
+            date: new Date().toLocaleDateString(),
+            contractName: 'Subscription Agreement',
+            
+            // Company Information
+            company: {
+                name: 'Acme Corp',
+                streetAddress: '123 Main St',
+                streetAddressLine2: 'Suite 456',
+                city: 'Anytown',
+                state: 'CA',
+                postalCode: '12345',
+                country: 'USA',
+                email: 'info@acmecorp.com',
+                phoneNumber: '555-1234'
+            },
+
+            // Investor Information
+            investor: {
+                name: 'Jane Doe',
+                streetAddress: '456 Oak Rd',
+                streetAddressLine2: 'Apt 789',
+                city: 'Elsewhere',
+                state: 'NY',
+                postalCode: '67890',
+                country: 'USA',
+                email: 'jane.doe@email.com',
+                phoneNumber: '555-5678'
+            },
+
+            // Subscription Details
+            subscription: {
+                numberOfShares: '100',
+                purchasePrice: '10.00',
+                paymentPeriod: '30 days',
+                deliveryPeriod: '14 days'
+            },
+
+            // Closing Information
+            closing: {
+                date: '2023-06-01'
+            },
+
+            // Legal Information
+            legal: {
+                stateCountry: 'Delaware, USA',
+                jurisdiction: 'State of Delaware'
+            },
+
+            // Signature Details
+            signatures: {
+                company: {
+                    name: 'John Smith',
+                    date: '2023-05-01',
+                    signature: 'J. Smith'
+                },
+                investor: {
+                    name: 'Jane Doe',
+                    date: '2023-05-01',
+                    signature: 'J. Doe'
+                }
+            }
+        };
+    </script>
+</head>
+
+<!-- END_SECTION: documentHead -->
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <div class="pdf-container">
+        <!-- END_SECTION: bodyStart -->
+
+        <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+
+        <div class="header">
+            <h1>Subscription Agreement</h1>
+        </div>
+        <!-- END_SECTION: agreementTitle -->
+
+
+        <!-- SECTION: {"key": "Section_1", "order": 5, "type": "legal", "hasVariables": true} -->
+
+        <p>This Subscription Agreement (referred to as the "Agreement") is executed on {{date}}, between:</p>
+        <table border="1">
+            <tr>
+                <td width="50%">
+                    <strong>The "Company"</strong><br>
+                    {{company.name}}<br>
+                    {{company.streetAddress}}<br>
+                    {{company.streetAddressLine2}}<br>
+                    {{company.city}}, {{company.state}} {{company.postalCode}}<br>
+                    {{company.country}}<br>
+                    Email: {{company.email}}<br>
+                    Phone: {{company.phoneNumber}}
+                </td>
+                <td width="50%">
+                    <strong>The "Investor"</strong><br>
+                    {{investor.name}}<br>
+                    {{investor.streetAddress}}<br>
+                    {{investor.streetAddressLine2}}<br>
+                    {{investor.city}}, {{investor.state}} {{investor.postalCode}}<br>
+                    {{investor.country}}<br>
+                    Email: {{investor.email}}<br>
+                    Phone: {{investor.phoneNumber}}
+                </td>
+            </tr>
+        </table>
+        <p>The Company and the Investor will be jointly referred to as the "Parties" and individually as a "Party".</p>
+        <div class="section">
+            <p><strong>BACKGROUND:</strong></p>
+            <p>The Company seeks to raise capital through a share offering to the Investor;</p>
+            <p>The Investor wishes to participate in this offering under the terms specified herein;</p>
+        </div>
+        <div class="section">
+            <h2>Terms and Conditions</h2>
+            <h3>1. Share Subscription</h3>
+            <p>The Investor agrees to subscribe for {{subscription.numberOfShares}} shares (the "Subscription Shares")
+                at a
+                total purchase price of {{subscription.purchasePrice}} (the "Subscription Amount").</p>
+            <p>Payment shall be completed within {{subscription.paymentPeriod}} days of execution via wire transfer or
+                other
+                approved payment methods.</p>
+            <p>The Company shall deliver the shares within {{subscription.deliveryPeriod}} days of receiving payment,
+                either
+                electronically or via physical certificates.</p>
+            <!-- END_SECTION: Section_1 -->
+
+
+            <!-- SECTION: {"key": "Section_2", "order": 5, "type": "legal", "hasVariables": false} -->
+            <h3>2. Representations and Warranties</h3>
+            <h4>2.1 Company Representations</h4>
+            <p>The Company represents and warrants that:</p>
+            <ul>
+                <li>It possesses all necessary corporate authority and power to execute and fulfill this Agreement;</li>
+                <li>All financial records provided to the Investor, including audited statements covering the relevant
+                    fiscal periods, are accurate, complete, and prepared according to standard accounting practices;
+                </li>
+                <li>It has the organizational capacity and resources to fulfill all obligations outlined herein.</li>
+            </ul>
+            <h4>2.2 Investor Acknowledgments</h4>
+            <p>The Investor acknowledges and confirms that:</p>
+            <ul>
+                <li>They have received and thoroughly examined the Company's confidential memorandum, including the
+                    Operating Agreement;</li>
+                <li>They possess sufficient financial and business expertise to assess both the potential benefits and
+                    risks
+                    associated with this investment opportunity;</li>
+                <li>They have been granted adequate opportunities to seek clarification and additional information
+                    regarding
+                    the investment terms.</li>
+            </ul>
+            <h4>2.3 Investor Indemnification</h4>
+            <p>The Investor hereby commits to protect and indemnify:</p>
+            <ul>
+                <li>The Company, its leadership team, staff members, representatives, and affiliated entities;</li>
+                <li>Against any financial losses, legal obligations, or regulatory penalties;</li>
+                <li>Resulting from any violation or inaccuracy in the Investor's representations within this Agreement;
+                </li>
+                <li>Including but not limited to costs of legal proceedings, settlements, and associated expenses.</li>
+            </ul>
+            <h4>2.4 Duration and Scope</h4>
+            <p>These representations and warranties shall:</p>
+            <ul>
+                <li>Remain valid throughout the duration of this Agreement;</li>
+                <li>Survive the completion of the share transfer;</li>
+                <li>Apply to all subsequent transactions between the Parties related to this investment.</li>
+            </ul>
+            <!-- END_SECTION: Section_2 -->
+
+            <!-- SECTION: {"key": "Section_3", "order": 5, "type": "legal", "hasVariables": true} -->
+            <h3>3. Transaction Closing</h3>
+            <p>Unless otherwise specified in writing by mutual agreement of the Parties, the finalization of this
+                transaction (the "Closing") shall be conducted through digital means on {{closing.date}}.</p>
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>Deliverables at Closing</th>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Company Obligations:</strong><br>
+                        • Executed Agreement<br>
+                        • Share certificates (digital or physical)<br>
+                        • Supporting documentation as required<br>
+                        • Additional materials upon reasonable request
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Investor Obligations:</strong><br>
+                        • Signed Agreement<br>
+                        • Payment confirmation<br>
+                        • Verification of fund transfer<br>
+                        • Supplementary documents as requested
+                    </td>
+                </tr>
+            </table>
+
+            <h3>4. Legal Framework</h3>
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <td>
+                        <p><strong>Governing Jurisdiction:</strong> This Agreement operates under the laws of
+                            {{legal.stateCountry}}.</p>
+                        <p><strong>Dispute Resolution:</strong> All legal proceedings shall be conducted exclusively in
+                            {{legal.jurisdiction}}. Both Parties hereby acknowledge and accept this venue's exclusive
+                            jurisdiction.</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- END_SECTION: Section_3 -->
+
+            <!-- SECTION: {"key": "Section_4", "order": 5, "type": "legal", "hasVariables": false} -->
+            <h3>5. General Provisions</h3>
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>Provision</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><strong>Succession Rights</strong></td>
+                    <td>Benefits and obligations extend to successors and approved assignees. Transfers require written
+                        approval, except for corporate restructuring events.</td>
+                </tr>
+                <tr>
+                    <td><strong>Completeness</strong></td>
+                    <td>This document supersedes all previous communications and represents the complete understanding
+                        between Parties regarding the subject matter.</td>
+                </tr>
+                <tr>
+                    <td><strong>Modification Protocol</strong></td>
+                    <td>Changes require:
+                        <ul>
+                            <li>Written documentation</li>
+                            <li>Explicit authorization</li>
+                            <li>Dual-party execution</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Severability</strong></td>
+                    <td>Invalid provisions shall be:
+                        <ul>
+                            <li>Adjusted for compliance</li>
+                            <li>Limited in scope to maintain validity</li>
+                            <li>Modified without affecting other terms</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Execution Format</strong></td>
+                    <td>
+                        <ul>
+                            <li>Multiple counterparts permitted</li>
+                            <li>Digital signatures equal to physical signatures</li>
+                            <li>Each copy considered original</li>
+                            <li>All copies form single agreement</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <!-- END_SECTION: Section_4 -->
+
+            <!-- SECTION: {"key": "Section_5", "order": 5, "type": "legal", "hasVariables": true} -->
+            <div class="section">
+                <table>
+                    <tr>
+                        <td width="50%">
+                            <strong>The Company</strong><br><br>
+                            Name: {{signatures.company.name}}<br>
+                            Date: {{signatures.company.date}}<br>
+                            <div class="signature-line">
+                                Signature: <span style="color:#f5f5f5"> **signature_1**/ </span>
+                            </div>
+                        </td>
+                        <td width="50%">
+                            <strong>The Investor</strong><br><br>
+                            Name: {{signatures.investor.name}}<br>
+                            Date: {{signatures.investor.date}}<br>
+                            <div class="signature-line">
+                                Signature: <span style="color:#f5f5f5"> **signature_2**/ </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- END_SECTION: Section_5 -->
+
+            <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+        </div>
+</body>
+
+</html>
+
+<!-- END_SECTION: bodyEnd -->

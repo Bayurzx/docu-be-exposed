@@ -1,0 +1,213 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- END_SECTION: documentStart -->
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promissory Note Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signature-line {
+            border-top: 1px solid black;
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        const inputs = {
+            date: new Date().toLocaleDateString(),
+            contractName: "Promissory Note Agreement",
+            jurisdiction_state: "California",
+            borrower: {
+                firstName: "John",
+                lastName: "Doe",
+                streetAddress: "1234 Elm Street",
+                streetAddressLine2: "Apt 101",
+                city: "Los Angeles",
+                state: "California",
+                postalCode: "90001",
+                country: "USA",
+                phoneNumber: "+1-555-1234",
+                email: "johndoe@example.com",
+                date: "2025-01-26"
+            },
+            lender: {
+                firstName: "Jane",
+                lastName: "Smith",
+                streetAddress: "5678 Oak Avenue",
+                streetAddressLine2: "Suite 202",
+                city: "San Francisco",
+                state: "California",
+                postalCode: "94105",
+                country: "USA",
+                phoneNumber: "+1-555-5678",
+                email: "janesmith@example.com",
+                date: "2025-01-26"
+            },
+            principalSum: "5000",
+            principalSumInWriting: "Five thousand dollars",
+            interestRate: "5%",
+            interestRateInNumber: "5",
+            paymentDue: {
+                day: "15",
+                month: "02",
+                year: "2025"
+            }
+        };
+    </script>
+</head>
+<!-- END_SECTION: documentHead -->
+
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+
+    <div class="header">
+        <h1>PROMISSORY NOTE AGREEMENT</h1>
+    </div>
+
+    <!-- END_SECTION: agreementTitle -->
+
+    <!-- SECTION: {"key": "Section_1", "order": 5, "type": "legal", "hasVariables": true} -->
+
+    <p>This Promissory Note agreement is executed on {{date}} in the State of {{jurisdiction_state}}.</p>
+
+    <table>
+        <tr>
+            <td colspan="2"><strong>BORROWER INFORMATION</strong></td>
+            <td colspan="2"><strong>LENDER INFORMATION</strong></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td>Full Name:</td>
+                        <td>{{borrower.firstName}} {{borrower.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>{{borrower.streetAddress}}<br>
+                            {{borrower.streetAddressLine2}}<br>
+                            {{borrower.city}}, {{borrower.state}} {{borrower.postalCode}}<br>
+                            {{borrower.country}}</td>
+                    </tr>
+                    <tr>
+                        <td>Contact:</td>
+                        <td>Tel: {{borrower.phoneNumber}}<br>
+                            Email: {{borrower.email}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td>Full Name:</td>
+                        <td>{{lender.firstName}} {{lender.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>{{lender.streetAddress}}<br>
+                            {{lender.streetAddressLine2}}<br>
+                            {{lender.city}}, {{lender.state}} {{lender.postalCode}}<br>
+                            {{lender.country}}</td>
+                    </tr>
+                    <tr>
+                        <td>Contact:</td>
+                        <td>Tel: {{lender.phoneNumber}}<br>
+                            Email: {{lender.email}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <p>IN CONSIDERATION OF THE VALUE RECEIVED, the undersigned Borrower hereby commits to pay the Lender the principal
+        amount of ${{principalSum}} ({{principalSumInWriting}} US Dollars), plus interest calculated at
+        {{interestRate}}% per annum on the outstanding principal balance under the following terms:</p>
+
+    <p>The complete balance of this Note, including all accrued interest, shall become due and fully payable on the
+        {{paymentDue.day}} day of {{paymentDue.month}}, {{paymentDue.year}}. Periodic installment payments are not
+        required under this agreement.</p>
+
+    <p>Should the Borrower default on any payment obligation, all unpaid principal will accrue interest at
+        {{interestRateInNumber}}% annually (or 18% if unspecified), or at the maximum legally permissible rate,
+        whichever is lower.</p>
+
+    <!-- END_SECTION: Section_1 -->
+
+
+    <!-- SECTION: {"key": "Section_2", "order": 6, "type": "legal", "hasVariables": false} -->
+    <h3>Transfer Restrictions:</h3>
+    <p>The Borrower may not transfer or assign any rights or obligations specified in this agreement without obtaining
+        prior written authorization from the Lender.</p>
+
+    <h3>Modifications:</h3>
+    <p>Any modifications or amendments to this Note require mutual written consent from both the Lender and Borrower.
+    </p>
+    <!-- END_SECTION: Section_2 -->
+
+
+    <!-- SECTION: {"key": "Section_3", "order": 7, "type": "legal", "hasVariables": true} -->
+
+    <h3>Jurisdiction:</h3>
+    <p>This Note shall be interpreted and enforced according to the laws of the State of {{jurisdiction_state}}.</p>
+
+    <table style="margin-top: 50px;">
+        <tr>
+            <td style="width: 50%; border: none;">
+                <p><strong>BORROWER:</strong></p>
+                <p>Name: {{borrower.firstName}} {{borrower.lastName}}</p>
+                <p>Date: {{borrower.date}}</p> <br>
+                <span style="color:#f5f5f5"> **signature_1**/</span>
+                <div class="signature-line"></div>
+                <p>Signature</p>
+            </td>
+            <td style="width: 50%; border: none;">
+                <p><strong>LENDER:</strong></p>
+                <p>Name: {{lender.firstName}} {{lender.lastName}}</p>
+                <p>Date: {{lender.date}}</p> <br>
+                <span style="color:#f5f5f5"> **signature_2**/</span>
+                <div class="signature-line"></div>
+                <p>Signature</p>
+            </td>
+        </tr>
+    </table>
+    <!-- END_SECTION: Section_3 -->
+
+    <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+</body>
+
+</html>
+<!-- END_SECTION: bodyEnd -->

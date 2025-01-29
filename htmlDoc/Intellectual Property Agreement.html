@@ -1,0 +1,375 @@
+<!-- SECTION: {"key": "documentStart", "order": 1, "type": "structure", "hasVariables": false} -->
+
+<!DOCTYPE html>
+<html>
+<!-- END_SECTION: documentStart -->
+
+
+<!-- SECTION: {"key": "documentHead", "order": 2, "type": "metadata", "hasVariables": false} -->
+
+<head>
+    <title>Intellectual Property Agreement</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <script>
+        const inputs = {
+            company: {
+                name: "ABC Corp",
+                streetAddress: "123 Business Blvd",
+                streetAddressLine2: "Suite 456",
+                city: "New York",
+                state: "NY",
+                postalCode: "10001",
+                country: "USA",
+                phoneNumber: "+1-555-1234",
+                email: "contact@abccorp.com",
+                revenueShare: "50%",
+                date: new Date().toLocaleDateString(),
+                signature: "John Doe"
+            },
+            owner: {
+                firstName: "Jane",
+                lastName: "Smith",
+                streetAddress: "456 Owner St",
+                streetAddressLine2: "Apt 789",
+                city: "New York",
+                state: "NY",
+                postalCode: "10001",
+                country: "USA",
+                phoneNumber: "+1-555-9876",
+                email: "jane.smith@email.com",
+                revenueShare: "50%",
+                date: new Date().toLocaleDateString(),
+                signature: "Jane Smith",
+                position: "CEO",
+            },
+            contractName: "Intellectual Property Agreement",
+            projectName: "Project X",
+            legal: {
+                governingState: "New York",
+                arbitrationBody: "American Arbitration Association",
+                arbitrationLocation: "New York, NY"
+            }
+        };
+    </script>
+</head>
+<!-- END_SECTION: documentHead -->
+
+
+
+<!-- SECTION: {"key": "bodyStart", "order": 3, "type": "structure", "hasVariables": false} -->
+
+<body>
+    <!-- END_SECTION: bodyStart -->
+
+    <!-- SECTION: {"key": "agreementTitle", "order": 4, "type": "content", "hasVariables": false} -->
+
+    <h1>Intellectual Property Agreement</h1>
+
+    <!-- END_SECTION: agreementTitle -->
+
+    <!-- SECTION: {"key": "Section_1_2", "order": 5, "type": "legal", "hasVariables": true} -->
+
+    <h3>I. Parties</h3>
+
+    <p>This Intellectual Property Agreement (the "Agreement") has been signed by and between the parties below, for the
+        purpose of regulating the rules regarding intellectual property rights between the Parties;</p>
+
+    <table width="100%">
+        <tr>
+            <th>The Company</th>
+            <th>The Owner</th>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td>Company Name:</td>
+                        <td>{{company.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Street Address:</td>
+                        <td>{{company.streetAddress}}</td>
+                    </tr>
+                    <tr>
+                        <td>Street Address Line 2:</td>
+                        <td>{{company.streetAddressLine2}}</td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td>{{company.city}}</td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>{{company.state}}</td>
+                    </tr>
+                    <tr>
+                        <td>Postal Code:</td>
+                        <td>{{company.postalCode}}</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>{{company.country}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td>{{company.phoneNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{company.email}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td>First Name:</td>
+                        <td>{{owner.firstName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td>{{owner.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Street Address:</td>
+                        <td>{{owner.streetAddress}}</td>
+                    </tr>
+                    <tr>
+                        <td>Street Address Line 2:</td>
+                        <td>{{owner.streetAddressLine2}}</td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td>{{owner.city}}</td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>{{owner.state}}</td>
+                    </tr>
+                    <tr>
+                        <td>Postal Code:</td>
+                        <td>{{owner.postalCode}}</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>{{owner.country}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td>{{owner.phoneNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{owner.email}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <p>The Company and the Owner shall be individually referred to as "Party" and collectively referred to as the
+        "Parties".</p>
+
+    <p>WHEREAS, the Owner is the employee of the Company in the position of {{owner.position}};</p>
+
+    <p>WHEREAS, the Owner agrees and undertakes to transfer intellectual property rights and related interests of its
+        original work, designs and other work created during the Owner's employment to the Company under the term and
+        conditions of this Agreement;</p>
+
+    <p>NOW THEREFORE, in consideration of the mutual covenants contained herein, the Parties agree as follows;</p>
+
+    <h3>II. Subject and Scope of the Agreement</h3>
+
+    <p>This Agreement governs the determination of all patent and utility model applications pertaining to inventions
+        and materials that may be subject to intellectual property rights, which arise within the scope of the
+        {{projectName}} Project. This project has been developed by the Owner, and this Agreement establishes the rights
+        and obligations of all parties regarding the industrial application and commercialization of the invention.</p>
+
+    <p>Any services that may be provided by the Owner to future transferees or licensees following the transfer or
+        licensing of the subject matter, including services related to patents or utility models connected to the
+        invention, are explicitly excluded from this Agreement's scope. Any fees associated with such services are also
+        considered outside the scope of this Agreement.</p>
+
+    <!-- END_SECTION: Section_1_2 -->
+
+
+    <!-- SECTION: {"key": "Section_3", "order": 6, "type": "legal", "hasVariables": false} -->
+
+    <h3>III. Rights and Obligations of the Parties</h3>
+
+    <h4>The Owner's Obligations:</h4>
+    <p>1. Shall provide the Company with comprehensive documentation, including all technical specifications and
+        information regarding the developed invention, whether patentable or not, in their capacity as the "inventor" as
+        defined by relevant legislation.</p>
+
+    <p>2. Acknowledges and agrees that the Company will be the applicant for all domestic and international registration
+        applications.</p>
+
+    <p>3. Commits to providing essential technical information for patent application preparation, including claims,
+        figures, and summaries. The Owner will collaborate with designated personnel and assist in document preparation
+        as needed.</p>
+
+    <p>4. Shall maintain confidentiality regarding the invention and will not disclose information to third parties
+        without the Company's written consent. The Owner will refrain from any actions that could compromise the
+        parties' rights under this Agreement.</p>
+
+    <p>5. Agrees to participate in necessary marketing negotiations when the Company pursues transfers or licenses.</p>
+
+    <h4>The Company's Obligations:</h4>
+    <p>1. Shall maintain confidentiality regarding the invention and will not disclose information to third parties
+        without the Owner's written consent. The Company will refrain from any actions that could compromise the
+        parties' rights under this Agreement.</p>
+
+    <p>2. Will manage all legal procedures to protect the Owner's rights, including signing necessary documentation for
+        patent/utility model applications and commercialization stages, and will keep the Owner informed of relevant
+        developments.</p>
+
+    <h3>IV. General Provisions</h3>
+    <p>Commercial decisions regarding patent commercialization require written consent from both Parties. If either
+        Party suspects a violation of patent/utility model rights by third parties, they must promptly notify the other
+        Party. The Company will take necessary legal measures at its expense.</p>
+
+    <p>In cases of third-party rights infringement during patent use, licensing, or commercialization, liability is
+        shared jointly between the parties.</p>
+
+    <h3>V. Term of Agreement</h3>
+    <p>This Agreement shall remain effective throughout the duration of the patent protection period unless terminated
+        according to the Agreement's termination provisions.</p>
+
+    <h3>VI. Termination</h3>
+    <p>The Parties may terminate this Agreement at any time through mutual written consent and agreement on termination
+        consequences.</p>
+
+    <p>If either Party fails to meet their obligations and does not remedy the situation within the specified notice
+        period, or if irreparable damage occurs, the affected Party may terminate this Agreement bilaterally.</p>
+
+    <!-- END_SECTION: Section_3 -->
+
+
+    <!-- SECTION: {"key": "Section_7_13", "order": 7, "type": "legal", "hasVariables": true} -->
+
+    <h3>VII. Revenue Sharing</h3>
+    <p>Net income from transfers and licenses, after deducting duties, taxes, and fees, shall be distributed as follows:
+    </p>
+    <p>The Owner - {{owner.revenueShare}}%<br>
+        The Company - {{company.revenueShare}}%</p>
+
+    <h3>VIII. Entire Agreement</h3>
+    <p>This Agreement represents the complete understanding between the Parties regarding the subject matter and
+        supersedes all prior agreements, negotiations, and representations, whether written or oral.</p>
+
+    <h3>IX. Non-Waiver</h3>
+    <p>Failure to enforce any provision does not constitute a waiver of future rights to enforce any terms or conditions
+        of this Agreement.</p>
+
+    <h3>X. Assignment</h3>
+    <p>Neither Party may assign or transfer this Agreement or its rights and obligations without prior written consent
+        from the other Party, except for the Owner's intellectual property-related rights and obligations.</p>
+
+    <h3>XI. Notices</h3>
+    <p>All required communications must be in writing and delivered to the addresses specified on the first page or to
+        subsequently designated addresses.</p>
+
+    <h3>XII. Governing Law and Dispute Resolution</h3>
+    <p>This Agreement is governed by the laws of the State of {{governingState}}. Disputes shall be resolved through
+        arbitration under the rules of {{arbitrationBody}} in {{arbitrationLocation}}. Arbitrator decisions shall be
+        final and binding.</p>
+
+    <table width="100%" style="margin-top: 40px;">
+        <tr>
+            <td width="50%">
+                <table width="100%">
+                    <tr>
+                        <th align="left">The Company</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>{{company.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                    </tr>
+                    <tr>
+                        <td>{{company.date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Signature</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="border-bottom: 1px solid black; min-height: 40px;"><span style="color:#f5f5f5">**signature_1**/</span></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="50%">
+                <table width="100%">
+                    <tr>
+                        <th align="left">The Owner</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>{{owner.firstName}} {{owner.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                    </tr>
+                    <tr>
+                        <td>{{owner.date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Signature</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="border-bottom: 1px solid black; min-height: 40px;"><span style="color:#f5f5f5">**signature_2**/</span></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END_SECTION: Section_7_13 -->
+
+    <!-- SECTION: {"key": "bodyEnd", "order": 99, "type": "structure", "hasVariables": false} -->
+</body>
+
+</html>
+
+<!-- END_SECTION: bodyEnd -->
